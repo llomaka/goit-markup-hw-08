@@ -1,0 +1,19 @@
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.section--no-bottom-padding {
+  padding-bottom: 0px;
+}
+
+.section__title {
+  margin-bottom: 50px;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.section__title--hidden {
+  @extend %visually-hidden;
+}

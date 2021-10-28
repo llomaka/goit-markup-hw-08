@@ -1,0 +1,39 @@
+.clients__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.clients__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  color: $icon-color;
+}
+
+.clients__icon {
+  display: inline-block;
+  fill: currentColor;
+}
+
+.clients__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid $icon-color;
+  border-radius: 4px;
+  transition: color 250ms $timing-function, border-color 250ms $timing-function;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    border-color: $accent-color;
+  }
+}
+
+.clients__text {
+  @extend %visually-hidden;
+}
