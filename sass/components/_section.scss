@@ -1,0 +1,25 @@
+.section {
+  @media screen and (min-width: 1199px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.section--no-bottom-padding {
+  @media screen and (min-width: 1199px) {
+    padding-bottom: 0px;
+  }
+}
+
+.section__title {
+  margin-bottom: 50px;
+  font-size: 28px;
+  line-height: 1.18;
+  text-align: center;
+}
+
+.section__title--hidden {
+  @extend %visually-hidden;
+}

@@ -27,6 +27,11 @@
           <span class="logo__highlight">Web</span>Studio
         </a>
         <nav>
+          <button class="menu__button" type="button">
+            <svg class="menu__icon" width="24" height="16">
+              <use href="./images/icons.svg#icon-menu"></use>
+            </svg>
+          </button>
           <ul class="menu__list menu__list--navigation">
             <li class="menu__item">
               <a class="menu__link menu__link--highlighted" href="./index.html"
@@ -238,9 +243,15 @@
             <li class="team__item">
               <img
                 class="team__image"
-                src="./images/OlhaRepina.jpg"
+                srcset="
+                  ./images/olharepina-mob.jpg  480w,
+                  ./images/olharepina-tab.jpg  768w,
+                  ./images/olharepina.jpg     1200w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 100vw"
+                src="./images/olharepina-mob.jpg"
                 alt="Фото Ольги Репиной"
-                width="270"
+                width="450"
               />
               <div class="team__caption">
                 <h3 class="team__name">Ольга Репина</h3>
@@ -727,6 +738,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
-    <script src="./js/kb-accessible.js"></script>
+    <!-- <script src="./js/kb-accessible.js"></script> -->
   </body>
 </html>
