@@ -1,3 +1,6 @@
 .navigation {
   margin-bottom: auto;
+  @media screen and (min-width: 787px) {
+    margin-bottom: 0;
+  }
 }
