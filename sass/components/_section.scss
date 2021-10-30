@@ -1,5 +1,5 @@
 .section {
-  @media screen and (min-width: 1199px) {
+  @media screen and (min-width: 1200px) {
     padding-top: 94px;
     padding-bottom: 94px;
   }
@@ -8,7 +8,7 @@
 }
 
 .section--no-bottom-padding {
-  @media screen and (min-width: 1199px) {
+  @media screen and (min-width: 1200px) {
     padding-bottom: 0px;
   }
 }

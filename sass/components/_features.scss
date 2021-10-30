@@ -1,5 +1,5 @@
 .features__list {
-  @media screen and (min-width: 1199px) {
+  @media screen and (min-width: 1200px) {
     display: flex;
   }
 }
@@ -9,7 +9,7 @@
   &:not(:last-child) {
     margin-bottom: 30px;
   }
-  @media screen and (min-width: 1199px) {
+  @media screen and (min-width: 1200px) {
     flex-basis: calc((100% - 3 * 30px) / 4);
     &:not(:last-child) {
       margin-right: 30px;
