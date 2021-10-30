@@ -15,10 +15,10 @@
 }
 
 .social__list {
-  display: inline-flex;
+  display: flex;
+  flex-wrap: wrap;
   .team &,
   .footer & {
-    display: flex;
     justify-content: space-between;
   }
 }
