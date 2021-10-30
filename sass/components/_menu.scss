@@ -6,17 +6,12 @@
   padding-bottom: 10px;
 }
 
-.menu__list {
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
-}
-
 .menu__button {
-  width: 40px;
-  height: 40px;
-  border-style: none;
-  background-color: inherit;
+  display: inline-flex;
+  border: none;
+  padding: 0px;
+  line-height: 0;
+  background-color: transparent;
   color: inherit;
   &:hover,
   &:focus {
@@ -24,6 +19,98 @@
   }
 }
 
+.menu__icon--open {
+  .menu__button.menu__button--is-open & {
+    display: none;
+  }
+}
+
+.menu__icon--close {
+  .menu__button & {
+    display: none;
+  }
+  .menu__button.menu__button--is-open & {
+    display: block;
+  }
+}
+
 .menu__icon {
+  .menu__button & {
+    z-index: 3;
+  }
   fill: currentColor;
+  .menu__list--contacts & {
+    display: none;
+  }
+}
+
+.menu__container {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 40px;
+  background-color: $white-color;
+  &.menu__container--is-open {
+    display: block;
+  }
+}
+
+.menu__list {
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+}
+
+.menu__list--navigation {
+  font-size: 40px;
+  margin-bottom: auto;
+}
+
+.menu__list--contacts {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 64px;
+  font-size: 24px;
+  line-height: 1.17;
+}
+
+.menu__item {
+  margin-bottom: 32px;
+  .menu__list--contacts &:last-child {
+    font-size: 34px;
+  }
+  .menu__list--contacts &:not(:last-child) {
+    margin-bottom: 0px;
+  }
+}
+
+.menu__link {
+  display: block;
+  .menu__list--navigation & {
+    color: $primary-text-color;
+    transition: color 250ms $timing-function;
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+  .menu__list--contacts & {
+    display: flex;
+    align-items: center;
+    color: $secondary-text-color;
+    transition: color 250ms $timing-function;
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+  .menu__list--contacts .menu__item:last-child & {
+    color: $hero-btn-accent-color;
+  }
+  &.menu__link--highlighted {
+    color: $accent-color;
+  }
 }

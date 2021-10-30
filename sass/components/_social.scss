@@ -1,6 +1,8 @@
 .social {
-  width: 206px;
-  margin-left: 70px;
+  .footer & {
+    width: 206px;
+    margin-left: 70px;
+  }
 }
 
 .social__title {
@@ -13,32 +15,46 @@
 }
 
 .social__list {
-  display: flex;
-  justify-content: space-between;
+  display: inline-flex;
+  .team &,
+  .footer & {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .social__item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 44px;
-  height: 44px;
-  color: $icon-color;
+  color: $accent-color;
+  .team &,
+  .footer & {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    color: $icon-color;
+  }
 }
 
 .social__icon {
   fill: currentColor;
+  .header & {
+    display: none;
+  }
 }
 
 .social__link {
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  transition: background-color 250ms $timing-function,
-    color 250ms $timing-function;
+  .team &,
+  .footer & {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: background-color 250ms $timing-function,
+      color 250ms $timing-function;
+  }
   &:hover,
   &:focus {
     color: $white-color;
@@ -56,5 +72,19 @@
 }
 
 .social__text {
-  @extend %visually-hidden;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  .team &,
+  .footer & {
+    @extend %visually-hidden;
+  }
+  .social__item:not(:first-child) & {
+    padding-left: 10px;
+  }
+  .social__item:not(:last-child) & {
+    padding-right: 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
 }
