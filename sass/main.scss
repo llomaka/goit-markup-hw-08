@@ -1,6 +1,7 @@
 @import 'utils/variables';
 @import 'utils/no-browser-styles';
 @import 'utils/extend';
+@import 'utils/mixins';
 @import 'components/page';
 @import 'components/container';
 @import 'components/header';
@@ -18,7 +19,7 @@
 @import 'components/team';
 @import 'components/social';
 // @import 'components/clients';
-// @import 'components/portfolio';
+@import 'components/portfolio';
 // @import 'components/filter';
 // @import 'components/subscription';
 // @import 'components/footer';
