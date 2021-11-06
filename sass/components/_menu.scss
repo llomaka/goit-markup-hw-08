@@ -50,13 +50,15 @@
   left: 0;
   width: 100vw;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
   padding: 48px 40px;
   background-color: $white-color;
   z-index: 10;
-  transform: translateX(-100%);
+  transform: translateY(-100%);
   transition: transform 250ms $timing-function;
   &.is-open {
-    transform: translateX(0);
+    transform: translateY(0);
   }
   @media screen and (min-width: 787px) {
     position: static;
@@ -77,12 +79,11 @@
 
 .menu__list--navigation {
   font-size: 40px;
-  margin-bottom: auto;
 }
 
 .menu__list--contacts {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   margin-bottom: 64px;
   font-size: 24px;
   line-height: 1.17;
@@ -92,6 +93,7 @@
   margin-bottom: 32px;
   .menu__list--contacts &:last-child {
     font-size: 34px;
+    order: -1;
   }
   .menu__list--contacts &:not(:last-child) {
     margin-bottom: 0px;
