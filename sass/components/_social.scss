@@ -1,7 +1,15 @@
 .social {
+  .header & {
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
   .footer & {
     width: 206px;
-    margin-left: 70px;
+    margin-bottom: 60px;
+    @media screen and (min-width: 767px) {
+      margin-left: 70px;
+    }
   }
 }
 
@@ -21,6 +29,11 @@
   .footer & {
     justify-content: space-between;
   }
+  .team & {
+    @media screen and (max-width: 767px) {
+      justify-content: center;
+    }
+  }
 }
 
 .social__item {
@@ -33,6 +46,11 @@
     width: 44px;
     height: 44px;
     color: $icon-color;
+  }
+  .team &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-right: 10px;
+    }
   }
 }
 
@@ -76,15 +94,15 @@
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
-  .team &,
-  .footer & {
-    @extend %visually-hidden;
-  }
   .social__item:not(:first-child) & {
     padding-left: 10px;
   }
   .social__item:not(:last-child) & {
     padding-right: 10px;
     border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+  .team &,
+  .footer & {
+    @extend %visually-hidden;
   }
 }
