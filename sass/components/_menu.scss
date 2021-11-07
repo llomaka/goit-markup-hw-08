@@ -4,9 +4,9 @@
   align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
-  @media screen and (min-width: 787px) {
-    display: flex;
-    align-items: center;
+  @media screen and (min-width: 768px) {
+    padding-top: 21px;
+    padding-bottom: 21px;
   }
 }
 
@@ -26,7 +26,7 @@
   &:focus {
     color: $accent-color;
   }
-  @media screen and (min-width: 787px) {
+  @media screen and (min-width: 768px) {
     display: none;
   }
 }
@@ -41,6 +41,10 @@
   fill: currentColor;
   .menu__list--contacts & {
     display: none;
+    @media screen and (min-width: 768px) {
+      display: block;
+      margin-right: 10px;
+    }
   }
 }
 
@@ -60,12 +64,14 @@
   &.is-open {
     transform: translateY(0);
   }
-  @media screen and (min-width: 787px) {
+  @media screen and (min-width: 768px) {
     position: static;
-    width: inherit;
-    height: inherit;
-    padding: 0;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    padding: 0px;
     z-index: 1;
+    transform: translateY(0);
   }
 }
 
@@ -77,6 +83,11 @@
 
 .menu__list--navigation {
   font-size: 40px;
+  @media screen and (min-width: 768px) {
+    margin-left: 88px;
+    font-size: inherit;
+    line-height: 1.14;
+  }
 }
 
 .menu__list--contacts {
@@ -85,16 +96,31 @@
   margin-bottom: 64px;
   font-size: 24px;
   line-height: 1.17;
+  @media screen and (min-width: 768px) {
+    margin-left: auto;
+    margin-bottom: 0px;
+    font-size: inherit;
+  }
 }
 
 .menu__item {
   margin-bottom: 32px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0px;
+  }
   .menu__list--contacts &:last-child {
     font-size: 34px;
     order: -1;
+    @media screen and (min-width: 768px) {
+      order: 0;
+      font-size: inherit;
+    }
   }
   .menu__list--contacts &:not(:last-child) {
     margin-bottom: 0px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 10px;
+    }
   }
 }
 
@@ -120,6 +146,9 @@
   }
   .menu__list--contacts .menu__item:last-child & {
     color: $hero-btn-accent-color;
+    @media screen and (min-width: 768px) {
+      color: $secondary-text-color;
+    }
   }
   &.menu__link--highlighted {
     color: $accent-color;
