@@ -7,9 +7,13 @@
 }
 
 .portfolio__item {
-  @include fbasis(3, 30px);
+  @include fbasis(2, 30px);
   box-shadow: none;
   transition: box-shadow 250ms $timing-function;
+  @media screen and (min-width: 1200px) {
+    @include fbasis(3, 30px);
+  }
+
   // &:not(:last-child) {
   //   margin-bottom: 30px;
   // }

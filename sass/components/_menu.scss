@@ -88,7 +88,6 @@
     flex-wrap: wrap;
     gap: 50px;
     align-items: center;
-    margin-left: 88px;
     font-size: inherit;
     line-height: 1.14;
   }
@@ -105,6 +104,11 @@
     margin-left: auto;
     margin-bottom: 0px;
     font-size: inherit;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
   }
 }
 
@@ -123,7 +127,7 @@
   }
   .menu__list--contacts &:not(:last-child) {
     margin-bottom: 0px;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
       margin-bottom: 10px;
     }
   }
@@ -159,6 +163,11 @@
     color: $hero-btn-accent-color;
     @media screen and (min-width: 768px) {
       color: $secondary-text-color;
+      transition: color 250ms $timing-function;
+      &:hover,
+      &:focus {
+        color: $accent-color;
+      }
     }
   }
 

@@ -3,7 +3,6 @@
   flex-wrap: wrap;
   gap: 30px;
   @media screen and (min-width: 1199px) {
-    justify-content: space-between;
     align-items: center;
   }
 }
@@ -12,14 +11,20 @@
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
+  color: $icon-color;
+
   @media screen and (min-width: 480px) {
     @include fbasis(2, 30px);
   }
+
   @media screen and (min-width: 768px) {
     margin-bottom: 0px;
     @include fbasis(3, 30px);
   }
-  color: $icon-color;
+
+  @media screen and (min-width: 1200px) {
+    @include fbasis(6, 30px);
+  }
 }
 
 .clients__icon {
@@ -39,6 +44,10 @@
   border: 1px solid $icon-color;
   border-radius: 4px;
   transition: color 250ms $timing-function, border 250ms $timing-function;
+
+  @media screen and (min-width: 1200px) {
+    padding: 15px 31px;
+  }
 
   &:hover,
   &:focus {

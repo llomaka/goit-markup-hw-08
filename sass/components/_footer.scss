@@ -4,17 +4,26 @@
   text-align: center;
   color: $white-color;
   background-color: $background-color-dark;
+  @media screen and (min-width: 1200px) {
+    text-align: inherit;
+  }
 }
 
 .footer__contents {
-  @media screen and (min-width: 767px) {
+  @media screen and (min-width: 768px) {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
 .footer__contacts {
-  @media screen and (max-width: 768px) {
-    margin-bottom: 60px;
+  margin-bottom: 60px;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-right: 165px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0px;
   }
 }
 
