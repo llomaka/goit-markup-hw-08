@@ -7,7 +7,7 @@
   .footer & {
     // width: 206px;
     margin-bottom: 60px;
-    @media screen and (min-width: 767px) {
+    @media screen and (min-width: 768px) {
       margin-left: 70px;
     }
   }
@@ -19,7 +19,7 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  @media screen and (min-width: 767px) {
+  @media screen and (min-width: 768px) {
     padding-top: 12px;
   }
 }
@@ -29,13 +29,7 @@
   flex-wrap: wrap;
   .team &,
   .footer & {
-    justify-content: space-between;
-  }
-  .team &,
-  .footer & {
-    @media screen and (max-width: 767px) {
-      justify-content: center;
-    }
+    justify-content: center;
   }
 }
 
@@ -52,9 +46,7 @@
   }
   .team &:not(:last-child),
   .footer &:not(:last-child) {
-    @media screen and (max-width: 767px) {
-      margin-right: 10px;
-    }
+    margin-right: 10px;
   }
 }
 

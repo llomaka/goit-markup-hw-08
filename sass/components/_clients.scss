@@ -1,7 +1,7 @@
 .clients__list {
   display: flex;
   flex-wrap: wrap;
-  // align-items: center;
+  gap: 30px;
   @media screen and (min-width: 1199px) {
     justify-content: space-between;
     align-items: center;
@@ -14,12 +14,10 @@
   margin-right: auto;
   @media screen and (min-width: 480px) {
     @include fbasis(2, 30px);
-    &:not(:nth-child(2n)) {
-      margin-right: 30px;
-    }
-    &:not(:nth-last-child(-n + 2)) {
-      margin-bottom: 30px;
-    }
+  }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0px;
+    @include fbasis(3, 30px);
   }
   color: $icon-color;
 }

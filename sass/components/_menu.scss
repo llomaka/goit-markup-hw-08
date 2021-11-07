@@ -5,8 +5,8 @@
   padding-top: 10px;
   padding-bottom: 10px;
   @media screen and (min-width: 768px) {
-    padding-top: 21px;
-    padding-bottom: 21px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 }
 
@@ -84,6 +84,10 @@
 .menu__list--navigation {
   font-size: 40px;
   @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    align-items: center;
     margin-left: 88px;
     font-size: inherit;
     line-height: 1.14;
@@ -97,6 +101,7 @@
   font-size: 24px;
   line-height: 1.17;
   @media screen and (min-width: 768px) {
+    justify-content: center;
     margin-left: auto;
     margin-bottom: 0px;
     font-size: inherit;
@@ -129,11 +134,16 @@
   .menu__list--navigation & {
     color: $primary-text-color;
     transition: color 250ms $timing-function;
+    @media screen and (min-width: 768px) {
+      padding: 32px 0px;
+    }
+
     &:hover,
     &:focus {
       color: $accent-color;
     }
   }
+
   .menu__list--contacts & {
     display: flex;
     align-items: center;
@@ -144,13 +154,28 @@
       color: $accent-color;
     }
   }
+
   .menu__list--contacts .menu__item:last-child & {
     color: $hero-btn-accent-color;
     @media screen and (min-width: 768px) {
       color: $secondary-text-color;
     }
   }
+
   &.menu__link--highlighted {
     color: $accent-color;
+    @media screen and (min-width: 768px) {
+      position: relative;
+      &::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: $accent-color;
+      }
+    }
   }
 }
