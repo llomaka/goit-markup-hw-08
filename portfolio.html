@@ -26,46 +26,131 @@
         <a class="logo menu__link" href="./index.html" lang="en">
           <span class="logo__highlight">Web</span>Studio
         </a>
-        <nav>
-          <ul class="menu__list menu__list--navigation">
-            <li class="menu__item">
-              <a class="menu__link" href="./index.html">Студия</a>
-            </li>
+        <button
+          class="menu__button menu__button--open js-open-menu"
+          type="button"
+          aria-expanded="false"
+        >
+          <svg
+            class="menu__icon"
+            width="24"
+            height="16"
+            aria-label="Переключатель мобильного меню"
+            aria-controls="menu__container"
+          >
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+        <div
+          class="menu__container menu__container--is-open js-menu-container"
+          id="menu__container"
+        >
+          <button
+            class="menu__button menu__button--close js-close-menu"
+            type="button"
+          >
+            <svg
+              class="menu__icon"
+              width="19"
+              height="19"
+              aria-label="Переключатель мобильного меню"
+            >
+              <use href="./images/icons.svg#icon-menu-close"></use>
+            </svg>
+          </button>
+          <nav class="navigation">
+            <ul class="menu__list menu__list--navigation">
+              <li class="menu__item">
+                <a class="menu__link" href="./index.html">Студия</a>
+              </li>
+              <li class="menu__item menu__link--highlighted">
+                <a class="menu__link" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#contacts">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="menu__list menu__list--contacts">
             <li class="menu__item">
               <a
-                class="menu__link menu__link--highlighted"
-                href="./portfolio.html"
-                >Портфолио</a
+                class="menu__link"
+                href="mailto:info@devstudio.com"
+                target="_blank"
+                lang="en"
               >
+                <svg class="menu__icon" width="16" height="12">
+                  <use href="./images/icons.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#contacts">Контакты</a>
+              <a class="menu__link" href="tel:+380961111111">
+                <svg class="menu__icon" width="10" height="16">
+                  <use href="./images/icons.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
             </li>
           </ul>
-        </nav>
-        <ul class="menu__list menu__list--contacts">
-          <li class="menu__item">
-            <a
-              class="menu__link"
-              href="mailto:info@devstudio.com"
-              target="_blank"
-              lang="en"
-            >
-              <svg class="menu__icon" width="16" height="12">
-                <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="tel:+380961111111">
-              <svg class="menu__icon" width="10" height="16">
-                <use href="./images/icons.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
+          <div class="social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a
+                  class="social__link"
+                  href=""
+                  target="_blank"
+                  rel="noreferrer noopener nofollow"
+                >
+                  <svg class="social__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                  <span class="social__text">Instagram</span></a
+                >
+              </li>
+              <li class="social__item">
+                <a
+                  class="social__link"
+                  href=""
+                  target="_blank"
+                  rel="noreferrer noopener nofollow"
+                >
+                  <svg class="social__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                  <span class="social__text">Twitter</span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a
+                  class="social__link"
+                  href=""
+                  target="_blank"
+                  rel="noreferrer noopener nofollow"
+                >
+                  <svg class="social__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                  <span class="social__text">Facebook</span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a
+                  class="social__link"
+                  href=""
+                  target="_blank"
+                  rel="noreferrer noopener nofollow"
+                >
+                  <svg class="social__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                  <span class="social__text">LinkedIn</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -134,8 +219,7 @@
                     <img
                       src="./images/technokryak-mob.jpg"
                       alt="Веб-сайт Технокряк"
-                      width="370"
-                      height="294"
+                      width="450"
                     />
                   </picture>
                   <p class="portfolio__overlay">
@@ -178,8 +262,7 @@
                     <img
                       src="./images/new-orlean-vs-golden-star-poster-mob.jpg"
                       alt="Постер New Orlean vs Golden Star"
-                      width="370"
-                      height="294"
+                      width="450"
                     />
                   </picture>
                   <p class="portfolio__overlay">
@@ -223,8 +306,7 @@
                     <img
                       src="./images/seafood-restaurant-mob.jpg"
                       alt="Логотип ресторана Seafood"
-                      width="370"
-                      height="294"
+                      width="450"
                     />
                   </picture>
                   <p class="portfolio__overlay">
@@ -266,8 +348,7 @@
                     <img
                       src="./images/prime-mob.jpg"
                       alt="Черные полноразмерные наушники"
-                      width="370"
-                      height="294"
+                      width="450"
                     />
                   </picture>
                   <p class="portfolio__overlay">
@@ -308,8 +389,7 @@
                     <img
                       src="./images/boxes-mob.jpg"
                       alt="Картонные коробки"
-                      width="370"
-                      height="294"
+                      width="450"
                     />
                   </picture>
                   <p class="portfolio__overlay">
@@ -354,8 +434,7 @@
                     <img
                       src="./images/inspiration-has-no-borders-mob.jpg"
                       alt="Моноблок с изображением веб-сайта"
-                      width="370"
-                      height="294"
+                      width="450"
                     />
                   </picture>
                   <p class="portfolio__overlay">
@@ -401,8 +480,7 @@
                     <img
                       src="./images/limited-edition-mob.jpg"
                       alt="Открытая книга"
-                      width="370"
-                      height="294"
+                      width="450"
                     />
                   </picture>
                   <p class="portfolio__overlay">
@@ -446,8 +524,7 @@
                     <img
                       src="./images/label-tag-mob.jpg"
                       alt="Бирка с надписью LAB EL TAG"
-                      width="370"
-                      height="294"
+                      width="450"
                     />
                   </picture>
                   <p class="portfolio__overlay">
@@ -492,8 +569,7 @@
                     <img
                       src="./images/growing-business-mob.jpg"
                       alt="Ноутбук с загруженным приложением Growing Business"
-                      width="370"
-                      height="294"
+                      width="450"
                     />
                   </picture>
                   <p class="portfolio__overlay">

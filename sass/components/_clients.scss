@@ -9,12 +9,17 @@
 }
 
 .clients__item {
-  @include fbasis(2, 30px);
-  &:not(:nth-child(2n)) {
-    margin-right: 30px;
-  }
-  &:not(:nth-last-child(-n + 2)) {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (min-width: 480px) {
+    @include fbasis(2, 30px);
+    &:not(:nth-child(2n)) {
+      margin-right: 30px;
+    }
+    &:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 30px;
+    }
   }
   color: $icon-color;
 }
