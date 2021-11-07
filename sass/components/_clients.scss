@@ -14,6 +14,7 @@
   color: $icon-color;
 
   @media screen and (min-width: 480px) {
+    margin-bottom: 0px;
     @include fbasis(2, 30px);
   }
 
