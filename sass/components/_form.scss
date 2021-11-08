@@ -34,6 +34,7 @@
   color: $primary-text-color;
   outline: none;
   transition: border 250ms $timing-function;
+
   .form__field:focus-within & {
     border: 1px solid $accent-color;
   }
@@ -51,6 +52,7 @@
   margin-bottom: 4px;
   text-align: left;
   color: $secondary-text-color;
+
   &:not(:first-child) {
     padding-top: 8px;
   }

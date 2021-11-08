@@ -1,25 +1,31 @@
 .clients__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  @media screen and (min-width: 480px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
   @media screen and (min-width: 1199px) {
     align-items: center;
   }
 }
 
 .clients__item {
-  margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
   color: $icon-color;
 
+  @media screen and (max-width: 479px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
   @media screen and (min-width: 480px) {
-    margin-bottom: 0px;
     @include fbasis(2, 30px);
   }
 
   @media screen and (min-width: 768px) {
-    margin-bottom: 0px;
     @include fbasis(3, 30px);
   }
 
