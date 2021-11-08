@@ -434,6 +434,13 @@ li {
   text-align: center;
 }
 
+@media screen and (min-width: 1200px) {
+  .section__title {
+    font-size: 36px;
+    line-height: 1.09;
+  }
+}
+
 .button {
   text-align: center;
   border-radius: 4px;
