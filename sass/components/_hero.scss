@@ -1,10 +1,13 @@
 .hero {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: $background-color-dark;
   max-width: 480px;
   height: 400px;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
@@ -71,16 +74,6 @@
           url('../images/hero-image@2x.jpg');
       }
     }
-  }
-}
-
-.hero__content {
-  @media screen and (min-width: 480px) {
-    padding-top: 118px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    padding-top: 200px;
   }
 }
 
