@@ -257,6 +257,13 @@ li {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .menu__list--contacts {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .menu__list--contacts {
     -webkit-box-pack: center;
@@ -428,7 +435,7 @@ li {
 }
 
 .section__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-size: 28px;
   line-height: 1.18;
   text-align: center;
@@ -436,6 +443,7 @@ li {
 
 @media screen and (min-width: 1200px) {
   .section__title {
+    margin-bottom: 50px;
     font-size: 36px;
     line-height: 1.09;
   }
