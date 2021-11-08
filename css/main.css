@@ -500,12 +500,12 @@ li {
 }
 
 .hero__content {
-  padding: 118px 0px;
+  padding-top: 118px;
 }
 
 @media screen and (min-width: 1200px) {
   .hero__content {
-    padding: 200px 0px;
+    padding-top: 200px;
   }
 }
 
