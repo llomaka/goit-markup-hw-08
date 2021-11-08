@@ -499,8 +499,10 @@ li {
   }
 }
 
-.hero__content {
-  padding-top: 118px;
+@media screen and (min-width: 480px) {
+  .hero__content {
+    padding-top: 118px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
