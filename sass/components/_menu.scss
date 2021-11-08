@@ -4,6 +4,7 @@
   align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
+
   @media screen and (min-width: 768px) {
     padding-top: 0px;
     padding-bottom: 0px;
@@ -22,10 +23,12 @@
   background-color: transparent;
   color: inherit;
   transition: color 250ms $timing-function;
+
   &:hover,
   &:focus {
     color: $accent-color;
   }
+
   @media screen and (min-width: 768px) {
     display: none;
   }
@@ -39,8 +42,10 @@
 
 .menu__icon {
   fill: currentColor;
+
   .menu__list--contacts & {
     display: none;
+
     @media screen and (min-width: 768px) {
       display: block;
       margin-right: 10px;
@@ -61,9 +66,11 @@
   z-index: 10;
   transform: translateY(-100%);
   transition: transform 250ms $timing-function;
+
   &.is-open {
     transform: translateY(0);
   }
+
   @media screen and (min-width: 768px) {
     position: static;
     width: 100%;
@@ -83,6 +90,7 @@
 
 .menu__list--navigation {
   font-size: 40px;
+
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
@@ -99,12 +107,14 @@
   margin-bottom: 64px;
   font-size: 24px;
   line-height: 1.17;
+
   @media screen and (min-width: 768px) {
     justify-content: center;
     margin-left: auto;
     margin-bottom: 0px;
     font-size: inherit;
   }
+
   @media screen and (min-width: 1200px) {
     flex-direction: row;
     gap: 30px;
@@ -114,19 +124,24 @@
 
 .menu__item {
   margin-bottom: 32px;
+
   @media screen and (min-width: 768px) {
     margin-bottom: 0px;
   }
+
   .menu__list--contacts &:last-child {
     font-size: 34px;
     order: -1;
+
     @media screen and (min-width: 768px) {
       order: 0;
       font-size: inherit;
     }
   }
+
   .menu__list--contacts &:not(:last-child) {
     margin-bottom: 0px;
+
     @media screen and (min-width: 768px) and (max-width: 1199px) {
       margin-bottom: 10px;
     }
@@ -138,6 +153,7 @@
   .menu__list--navigation & {
     color: $primary-text-color;
     transition: color 250ms $timing-function;
+
     @media screen and (min-width: 768px) {
       padding: 32px 0px;
     }
@@ -153,6 +169,7 @@
     align-items: center;
     color: $secondary-text-color;
     transition: color 250ms $timing-function;
+
     &:hover,
     &:focus {
       color: $accent-color;
@@ -161,9 +178,11 @@
 
   .menu__list--contacts .menu__item:last-child & {
     color: $hero-btn-accent-color;
+
     @media screen and (min-width: 768px) {
       color: $secondary-text-color;
       transition: color 250ms $timing-function;
+
       &:hover,
       &:focus {
         color: $accent-color;
@@ -173,8 +192,10 @@
 
   &.menu__link--highlighted {
     color: $accent-color;
+
     @media screen and (min-width: 768px) {
       position: relative;
+
       &::after {
         position: absolute;
         bottom: 0;

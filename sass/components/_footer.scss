@@ -4,6 +4,7 @@
   text-align: center;
   color: $white-color;
   background-color: $background-color-dark;
+
   @media screen and (min-width: 1200px) {
     text-align: inherit;
   }
@@ -19,9 +20,11 @@
 
 .footer__contacts {
   margin-bottom: 60px;
+
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     margin-right: 165px;
   }
+
   @media screen and (min-width: 1200px) {
     margin-bottom: 0px;
   }
@@ -38,6 +41,7 @@
 
 .footer__post-address {
   transition: color 250ms $timing-function;
+
   &:hover {
     color: $accent-color;
   }
@@ -55,6 +59,7 @@
 .footer__link {
   color: $footer-contatcs-color;
   transition: color 250ms $timing-function;
+
   &:hover,
   &:focus {
     color: $accent-color;

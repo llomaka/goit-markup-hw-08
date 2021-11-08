@@ -8,6 +8,7 @@
     justify-content: center;
     margin-bottom: 30px;
   }
+
   @media screen and (min-width: 1200px) {
     margin-bottom: 50px;
   }
@@ -27,6 +28,7 @@
   box-shadow: none;
   transition: color 250ms $timing-function,
     background-color 250ms $timing-function, box-shadow 250ms $timing-function;
+
   &:hover,
   &:focus,
   &:active {
